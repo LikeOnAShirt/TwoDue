@@ -1,2 +1,4 @@
-package com.likeonashirt.twodue.controller;public class HomeController {
+package com.likeonashirt.twodue.controller;
+
+public class HomeController {
 }

@@ -47,7 +47,7 @@
         <button type="submit" class="btn">Register</button>
 
         <div class="login-link">
-            <p>Already have an account? <a href="${pageContext.request.contextPath}/login">Log In</a></p>
+            <p>Already have an account? <a href="${pageContext.request.contextPath}/">Log In</a></p>
         </div>
 
     </form>

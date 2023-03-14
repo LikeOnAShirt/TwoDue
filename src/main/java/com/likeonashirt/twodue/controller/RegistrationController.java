@@ -1,8 +1,9 @@
 package com.likeonashirt.twodue.controller;
 
 import com.likeonashirt.twodue.dto.RegistrationDTO;
-import com.likeonashirt.twodue.model.User;
-import com.likeonashirt.twodue.repository.UserRepository;
+import com.likeonashirt.twodue.service.UserService;
+import com.likeonashirt.twodue.util.Logger;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,14 +16,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class RegistrationController {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
+    @Autowired
+    private HttpServletRequest request;
 
     @GetMapping("/registration")
     public String showRegistrationForm(Model model) {
+
+        Logger.logTransaction(request);
+        String response = "registration response";
+        Logger.logRequestResponse(request, response);
+
         model.addAttribute("registrationDTO", new RegistrationDTO());
         model.addAttribute("emailExistsError", "");
         model.addAttribute("emailMatchError", "");
         model.addAttribute("passwordMatchError", "");
+
         return "registration";
     }
 
@@ -48,22 +57,12 @@ public class RegistrationController {
         }
 
         //confirm user does not already exist
-        User existingUser = userRepository.findByEmail(email);
-        if (existingUser != null) {
+        if (userService.emailExists(email)) {
             model.addAttribute("emailExistsError", "This account already exists");
             return "registration";
         }
 
-        User user = new User();
-        user.setEmail(email);
-        user.setFirstName(firstName);
-        user.setLastName(lastName);
-        user.setDisplayName(displayName);
-        user.setPassword(password);
-        userRepository.save(user);
-
+        userService.createUser(email, firstName, lastName, displayName, password);
         return "redirect:/login";
-
     }
-
 }

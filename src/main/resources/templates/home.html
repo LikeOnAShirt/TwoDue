@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Two Column Layout</title>
+  <link rel="stylesheet" type="text/css" href="mainstyle.css">
 </head>
 <body>
-$END$
+<div class="container">
+  <div class="left-col">
+    <div class="logo">
+      <img src="../../SquareLogo.png" alt="TwoDue logo">
+      <h1>Display Name</h1>
+    </div>
+    <ul class="list">
+      <li>Due Today</li>
+      <li>In Progress</li>
+      <li>All Tasks</li>
+      <li>Assigned Tasks</li>
+    </ul>
+    <div class="textbox">
+      <input type="text" placeholder="Add a task...">
+    </div>
+    <div class="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </div>
+    <div class="textbox">
+      <input type="text" placeholder="Add an item...">
+    </div>
+  </div>
+  <div class="right-col">
+    <h1 class="title">Title</h1>
+    <button class="collapsible">Item 1</button>
+    <div class="content">
+      <p>More information about item 1</p>
+    </div>
+    <button class="collapsible">Item 2</button>
+    <div class="content">
+      <p>More information about item 2</p>
+    </div>
+    <button class="collapsible">Item 3</button>
+    <div class="content">
+      <p>More information about item 3</p>
+    </div>
+    <button class="collapsible">Item 4</button>
+    <div class="content">
+      <p>More information about item 4</p>
+    </div>
+    <div class="textbox">
+      <input type="text" placeholder="Add an item...">
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
