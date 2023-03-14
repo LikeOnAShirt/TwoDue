@@ -1,0 +1,135 @@
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set height of the whole page to 100% */
+html, body {
+    height: 100%;
+}
+
+/* Create a flex container to hold the columns */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Left column styles */
+.left-col {
+    flex: 1; /* Take up 1/4 of the width */
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    resize: horizontal; /* Make the column resizable */
+    overflow: auto; /* Add a scrollbar when content overflows */
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding: 10px;
+    cursor: move;
+}
+
+.textbox {
+    margin-top: 20px;
+}
+
+.textbox input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    width: 100%;
+}
+
+/* Right column styles */
+.right-col {
+    flex: 3; /* Take up 3/4 of the width */
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Add a scrollbar when content overflows */
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.collapsible {
+    background-color: #eee;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.collapsible.active {
+    background-color: #ccc;
+}
+
+.collapsible.active + .content {
+    display: block;
+}
+
+/* Style for the drag-and-drop functionality */
+.list, .content {
+    touch-action: none;
+}
+
+.list li:hover, .collapsible:hover {
+    background-color: #f2f2f2;
+}
+
+.list li:active, .collapsible:active {
+    background-color: #e6e6e6;
+}
+
+.list li:focus, .collapsible:focus {
+    outline: none;
+}
+
+/* Media query to make the columns stack on smaller screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-col, .right-col {
+        flex-basis: auto;
+    }
+}

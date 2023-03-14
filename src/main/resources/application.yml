@@ -1,0 +1,24 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: '${DATABASE_CONN_STR}'
+    username: '${DATABASE_USER}'
+    password: '${DATABASE_PASS}'
+    driver-class-name: '${DATABASE_DRIVER_CLASS}'
+  jpa:
+    database: MySQL
+    show-sql: true
+    properties:
+      hibernate:
+        current_session_context_class: 'org.springframework.orm.hibernate5.SpringSessionContext'
+        ddl-auto: update
+        dialect: 'org.hibernate.dialect.MySQLDialect'
+logging:
+  level:
+    org:
+      springframework: INFO
