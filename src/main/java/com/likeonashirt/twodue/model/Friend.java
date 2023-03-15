@@ -1,9 +1,6 @@
 package com.likeonashirt.twodue.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -15,6 +12,9 @@ import lombok.*;
 @Table(name = "Friend")
 public class Friend {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private long id;
     @Column(name = "useremail")
     private String useremail;
     @Column(name = "friendemail")

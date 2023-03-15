@@ -5,8 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface FriendRepository extends JpaRepository<Friend, String> {
-    void deleteByFriendemail(String friendemail);
+public interface FriendRepository extends JpaRepository<Friend, Long> {
 
     List<Friend> findByUseremail(String email);
 

@@ -57,8 +57,8 @@ public class FriendController {
     }
 
     @GetMapping("/delete-friend")
-    public String deleteFriend(@RequestParam("friendemail") String friendemail) {
-        friendService.deleteFriend(friendemail);
+    public String deleteFriend(@RequestParam("id") Long id) {
+        friendService.deleteFriend(id);
         return "redirect:/friends";
     }
 

@@ -32,9 +32,9 @@ public class FriendService {
 
     }
 
-    public void deleteFriend(String friendemail) {
+    public void deleteFriend(Long fid) {
 
-        friendRepository.deleteByFriendemail(friendemail);
+        friendRepository.deleteById(fid);
 
     }
 

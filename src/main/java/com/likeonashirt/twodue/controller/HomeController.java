@@ -13,13 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @Autowired
-    private TaskService taskService;
-
-    @Autowired
     private HttpServletRequest request;
 
     @GetMapping("/home")
-    public String showTasks(ModelMap model, HttpSession session) {
+    public String showHome(ModelMap model, HttpSession session) {
 
         Logger.logTransaction(request);
         String response = "home response";
