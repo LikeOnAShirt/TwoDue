@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 public class FriendStatus {
     @Id
     @Column(name = "fsid")
-    private int sid;
+    private int fsid;
     @Column(name = "status")
     private String status;
 

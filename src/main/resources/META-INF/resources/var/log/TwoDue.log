@@ -202,3 +202,66 @@ login response
 2023-03-14 17:21:28 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
 2023-03-14 17:21:28 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
 tasks response
+2023-03-14 18:29:14 0:0:0:0:0:0:0:1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+2023-03-14 18:29:14 0:0:0:0:0:0:0:1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+login response
+2023-03-14 18:29:17 0:0:0:0:0:0:0:1 GET /tasks http://localhost:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+2023-03-14 18:29:17 0:0:0:0:0:0:0:1 GET /tasks http://localhost:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+tasks response
+2023-03-14 23:17:08 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:17:08 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+login response
+2023-03-14 23:17:16 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:17:16 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+tasks response
+2023-03-14 23:17:26 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:17:26 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response
+2023-03-14 23:18:54 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:18:54 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+login response
+2023-03-14 23:18:58 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:18:58 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+tasks response
+2023-03-14 23:19:01 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:19:01 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response
+2023-03-14 23:19:08 127.0.0.1 GET /home http://127.0.0.1:8080/friends Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:19:08 127.0.0.1 GET /home http://127.0.0.1:8080/friends Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+home response
+2023-03-14 23:19:18 127.0.0.1 GET /tasks http://127.0.0.1:8080/friends Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:19:18 127.0.0.1 GET /tasks http://127.0.0.1:8080/friends Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+tasks response
+2023-03-14 23:19:20 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:19:20 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response
+2023-03-14 23:24:43 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:24:43 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+login response
+2023-03-14 23:24:47 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:24:47 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+tasks response
+2023-03-14 23:24:49 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:24:49 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response
+2023-03-14 23:27:52 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:27:52 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+login response
+2023-03-14 23:27:56 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:27:56 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+tasks response
+2023-03-14 23:27:58 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:27:58 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response
+2023-03-14 23:28:08 127.0.0.1 GET /friends http://127.0.0.1:8080/add-friend Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:28:08 127.0.0.1 GET /friends http://127.0.0.1:8080/add-friend Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response
+2023-03-14 23:33:21 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:33:21 127.0.0.1 GET /login null Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+login response
+2023-03-14 23:33:25 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:33:25 127.0.0.1 GET /tasks http://127.0.0.1:8080/login Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+tasks response
+2023-03-14 23:33:28 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+2023-03-14 23:33:28 127.0.0.1 GET /friends http://127.0.0.1:8080/tasks Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0
+friends response

@@ -42,6 +42,7 @@ public class TaskController {
         model.addAttribute("taskList", taskList);
 
         return "tasks";
+
     }
 
     @GetMapping("/add-task")

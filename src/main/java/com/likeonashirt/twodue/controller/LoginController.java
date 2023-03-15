@@ -46,5 +46,7 @@ public class LoginController {
             System.out.println("DisplayName set in session: " + user.getDisplayName());
             return "redirect:/tasks";
         }
+
     }
+
 }
