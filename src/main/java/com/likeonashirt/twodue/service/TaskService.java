@@ -23,17 +23,16 @@ public class TaskService {
         String taskname = taskDTO.getTaskname();
         LocalDateTime duedate = taskDTO.getDuedate();
         int status = 1;
-        String taskowner = email;
-        String taskassignee = email;
 
         Task task = new Task();
         task.setTaskname(taskname);
         task.setDuedate(duedate);
         task.setStatus(status);
-        task.setTaskowner(taskowner);
-        task.setTaskassignee(taskassignee);
+        task.setTaskowner(email);
+        task.setTaskassignee(email);
         taskRepository.save(task);
     }
+
 
     public Task getTask(Long id) {
         return taskRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid task id: " + id));
@@ -41,14 +40,17 @@ public class TaskService {
 
     public void updateTask(Task updatedTask) {
         Task existingTask = taskRepository.findById(updatedTask.getTid()).orElse(null);
+        if (existingTask == null) {
+            throw new IllegalArgumentException("Invalid task id: " + updatedTask.getTid());
+        }
         if (updatedTask.getTaskname() != null) {
             existingTask.setTaskname(updatedTask.getTaskname());
         }
         if (updatedTask.getDuedate() != null) {
             existingTask.setDuedate(updatedTask.getDuedate());
         }
-        if (updatedTask.getStatus() != 1) {
-            existingTask.setStatus(1);
+        if (updatedTask.getStatus() != existingTask.getStatus()) {
+            existingTask.setStatus(updatedTask.getStatus());
         }
         if (updatedTask.getTaskowner() != null) {
             existingTask.setTaskowner(updatedTask.getTaskowner());

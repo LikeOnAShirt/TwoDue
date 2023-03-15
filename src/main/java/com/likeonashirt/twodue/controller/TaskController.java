@@ -10,7 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -32,8 +35,6 @@ public class TaskController {
 
         String email = (String) session.getAttribute("email");
         String displayName = (String) session.getAttribute("displayname");
-        System.out.println("Email retrieved from session: " + email);
-        System.out.println("DisplayName set in session: " + displayName);
 
         List<Task> taskList = taskService.findByTaskassignee(email);
         model.addAttribute("showEmail", email);
@@ -51,7 +52,7 @@ public class TaskController {
 
     @PostMapping("/add-task")
     public String addNewTask(@ModelAttribute("taskDTO") TaskDTO taskDTO, HttpSession session) {
-        taskService.saveTask(taskDTO, "email");
+        taskService.saveTask(taskDTO, (String) session.getAttribute("email"));
         return "redirect:/tasks";
     }
 
